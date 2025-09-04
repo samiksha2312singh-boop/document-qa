@@ -51,3 +51,22 @@ else:
 
         # Stream the response to the app using `st.write_stream`.
         st.write_stream(stream)
+
+# Configure the page
+st.set_page_config(
+    page_title="Multi-page Labs App",
+    page_icon="📚",
+    layout="wide"
+)
+
+# Create navigation
+st.sidebar.title("Navigation")
+page = st.sidebar.selectbox("Choose a Lab:", ["Lab 2 (Default)", "Lab 1"])
+
+# Import and run the selected page
+if page == "Lab 1":
+    import lab1
+    lab1.run()
+elif page == "Lab 2 (Default)":
+    import lab2
+    lab2.run()
