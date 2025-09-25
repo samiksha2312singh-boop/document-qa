@@ -78,3 +78,7 @@ elif page == "Lab 3":
 elif page == "Lab 4":
     import lab4
     lab4.run()
+
+elif page == "Lab5":
+    import lab5
+    lab5.run()
